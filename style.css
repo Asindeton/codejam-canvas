@@ -1,0 +1,104 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/Roboto/Roboto-Regular.ttf");
+}
+body {
+  background: #E5E5E5;
+  margin: 0 auto;
+  max-width: 1450px;
+}
+
+header {
+  width: 100%;
+  height: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24), 0px 0px 4px rgba(0, 0, 0, 0.12);
+  background: white;
+  border: 10px;
+  z-index: 10;
+  position: fixed;
+  max-width: 1450px;
+}
+header .nav_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 0 10px;
+}
+header .nav_wrapper .left-part {
+  display: flex;
+}
+header .nav_wrapper .left-part .nav-icon {
+  margin-right: 20px;
+  position: relative;
+}
+header .nav_wrapper .left-part .nav-icon img {
+  margin-top: 5px;
+}
+header .nav_wrapper .left-part .page-title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+main .main-wrapper {
+  width: 100%;
+  height: 950px;
+  background: white;
+  position: relative;
+}
+main .main-wrapper .panel-block {
+  display: flex;
+  flex-direction: column;
+}
+main .main-wrapper .panel-block .panel {
+  width: 220px;
+  height: 220px;
+  margin-left: 30px;
+  margin-top: 80px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24), 0px 0px 4px rgba(0, 0, 0, 0.12);
+}
+
+.canvas-block {
+  position: absolute;
+  left: 720px;
+  top: 120px;
+  border: 1px solid rgba(0, 0, 0, 0.541327);
+  width: 512px;
+  height: 512px;
+}
+
+li {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.541327);
+}
+
+.item-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid black;
+}
+
+.color-panel ul {
+  display: flex;
+  align-items: center;
+}
+.color-panel ul li:nth-child(2) {
+  margin-left: 5px;
+}
+
+.item {
+  margin: 27px 15px;
+}
+.item:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */

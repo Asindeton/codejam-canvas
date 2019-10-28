@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+  <link rel="stylesheet" href="./style.css">
+  <title>Canvas</title>
+</head>
+<body>
+  <div>
+    <header>
+      <nav>
+        <div class="nav_wrapper">
+          <div class="left-part">
+              <div class="nav-icon"><img src="./assets/img/header/icon.svg" alt="" srcset=""></div>
+              <div class="page-title"><h1>CodeJam - Pallet</h1></div>
+          </div>
+          <div class="menu-icon"><img src="./assets/img/header/menu.svg" alt=""></div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="main-wrapper">
+        <div class="panel-block">
+          <div class="panel action">
+            <ul>
+              <li>
+                <ul>
+                  <li class="item-panel item"><img src="./assets/img/main/paint_bucket_icon.svg" alt=""> Paint bucket</li>
+                  <li class="item-panel item"><img src="./assets/img/main/choose_color_icon.svg" alt=""> Choose color</li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li class="item-panel item"><img src="./assets/img/main/move_icon.svg" alt=""> Move</li>
+                  <li class="item-panel item"><img src="./assets/img/main/transform_icon.svg" alt=""> Transform</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="panel color">
+            <ul>
+              <li>
+                <ul>
+                  <li class="color-panel item">
+                    <ul>
+                      <li class="item-color" style="background: #C4C4C4;"></li>
+                      <li>Current color</li>
+                    </ul>
+                  </li>
+                  <li class="color-panel item">
+                      <ul>
+                        <li class="item-color" style="background: #41F795;"></li>
+                        <li>Prev color</li>
+                      </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                    <li class="color-panel item">
+                        <ul>
+                          <li class="item-color" style="background: #F74141;"></li>
+                          <li>red</li>
+                        </ul>
+                    </li>
+                    <li class="color-panel item">
+                        <ul>
+                          <li class="item-color" style="background: #41B6F7;"></li>
+                          <li>blue</li>
+                        </ul>
+                    </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="panel change-img">
+            <ul>
+              <li>
+                <div class="item">
+                  <input type="radio" id="4x4" name="img" value="4x4">
+                  <label for="4x4">4 x 4</label>
+                </div>
+              </li>
+              <li>
+                <div class="item">
+                  <input type="radio" id="32x32" name="img" value="32x32">
+                  <label for="32x32">32 x 32</label>
+                </div>                
+              </li>
+              <li>
+                <div class="item">
+                  <input type="radio" id="rs-scope" name="img" value="rs-scope">
+                  <label for="rs-scope">rs-scope</label>
+                </div>                
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="canvas-block">
+          <canvas class="canvas" id="canvas" width="512" height="512" ></canvas>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
