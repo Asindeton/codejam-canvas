@@ -6216,23 +6216,22 @@ let array32 =[
     ]
 ];
 
-//обработка радио чекбоксов
-var radio = document.getElementsByName('img');
-for(var i = 0; i < radio.length; i++){
+
+let radio = document.getElementsByName('img');
+let activeRadio;
+let canvas = document.getElementById("canvas");
+let ctx = canvas.getContext("2d");
+canvas.width = canvas.height = 512 ;
+
+for(let i = 0; i < radio.length; i++){
     radio[i].onchange = testRadio;
 }
-
-let activeRadio;
 
 function testRadio(){
     activeRadio = this.id;
      
     if(activeRadio === 'rs-scope'){
-        var img = new Image();
-
-        let canvas = document.getElementById('canvas');
-        let ctx = canvas.getContext('2d');
-
+        let img = new Image();
 
         img.onload = function() {
             ctx.drawImage(img, 0, 0,  canvas.width, canvas.height);
@@ -6240,26 +6239,21 @@ function testRadio(){
         img.src = "./assets/img/canvas/image.png";
 
     } else if(activeRadio === '4x4'){
-        
-        var canvas = document.getElementById("canvas");
-        var ctx = canvas.getContext("2d");
-
+        let pixelSize = canvas.width / 4;
         for(let i = 0; i<array4.length; i++){
             for(let j = 0; j<array4[i].length; j++){
                 ctx.fillStyle = "#" + array4[i][j];
-                ctx.fillRect(i * 128, j * 128, 128, 128);
+                ctx.fillRect(i * pixelSize, j * pixelSize, pixelSize, pixelSize);
             }
 
         }
     } else if(activeRadio === '32x32'){
-
-        var canvas = document.getElementById("canvas");
-        var ctx = canvas.getContext("2d");
+      let pixelSize = canvas.width / 32;
         ctx.clearRect(0, 0, 512, 512);
         for (let i = 0; i < array32.length; i++) {
             for (let j = 0; j < array32[i].length; j++) {
                 ctx.fillStyle = 'rgba(' + array32[i][j][0] + ',' + array32[i][j][1] + ',' + array32[i][j][2] + ',' + (array32[i][j][3]/255).toFixed(3) +')';
-                ctx.fillRect(i*16, j*16, 16, 16);
+                ctx.fillRect(i*pixelSize, j*pixelSize, pixelSize, pixelSize);
             }
         }
         }

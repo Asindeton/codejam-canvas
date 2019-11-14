@@ -9,71 +9,34 @@
   <title>Canvas</title>
 </head>
 <body>
-  <div>
+  <div class="body-wrapper">
     <header>
-      <nav>
-        <div class="nav_wrapper">
-          <div class="left-part">
-              <div class="nav-icon"><img src="./assets/img/header/icon.svg" alt="" srcset=""></div>
-              <div class="page-title"><h1>CodeJam - Pallet</h1></div>
-          </div>
-          <div class="menu-icon"><img src="./assets/img/header/menu.svg" alt=""></div>
+      <div class="nav_wrapper">
+        <div class="menu-page-title">
+            <div class="nav-icon"><img src="./assets/img/header/icon.svg" alt="" srcset=""></div>
+            <div class="page-title"><h1>CodeJam &ndash; Palette</h1></div>
         </div>
-      </nav>
+        <div class="menu-icon"><img src="./assets/img/header/menu.svg" alt=""></div>
+      </div>
     </header>
     <main>
       <div class="main-wrapper">
         <div class="panel-block">
-          <div class="panel action">
+          <div class="panel">
             <ul>
-              <li>
-                <ul>
-                  <li class="item-panel item"><img src="./assets/img/main/paint_bucket_icon.svg" alt=""> Paint bucket</li>
-                  <li class="item-panel item"><img src="./assets/img/main/choose_color_icon.svg" alt=""> Choose color</li>
-                </ul>
-              </li>
-              <li>
-                <ul>
-                  <li class="item-panel item"><img src="./assets/img/main/move_icon.svg" alt=""> Move</li>
-                  <li class="item-panel item"><img src="./assets/img/main/transform_icon.svg" alt=""> Transform</li>
-                </ul>
-              </li>
+               <li class="item"><img src="./assets/img/main/paint_bucket_icon.svg" alt=""> Paint bucket</li>
+               <li class="item"><img src="./assets/img/main/choose_color_icon.svg" alt=""> Choose color</li>
+               <li class="item"><img src="./assets/img/main/move_icon.svg" alt=""> Move</li>
+               <li class="item"><img src="./assets/img/main/transform_icon.svg" alt=""> Transform</li>
             </ul>
           </div>
-          <div class="panel color">
-            <ul>
-              <li>
-                <ul>
-                  <li class="color-panel item">
-                    <ul>
-                      <li class="item-color" style="background: #C4C4C4;"></li>
-                      <li>Current color</li>
-                    </ul>
-                  </li>
-                  <li class="color-panel item">
-                      <ul>
-                        <li class="item-color" style="background: #41F795;"></li>
-                        <li>Prev color</li>
-                      </ul>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <ul>
-                    <li class="color-panel item">
-                        <ul>
-                          <li class="item-color" style="background: #F74141;"></li>
-                          <li>red</li>
-                        </ul>
-                    </li>
-                    <li class="color-panel item">
-                        <ul>
-                          <li class="item-color" style="background: #41B6F7;"></li>
-                          <li>blue</li>
-                        </ul>
-                    </li>
-                </ul>
-              </li>
+          <div class="panel">
+            <ul id = 'colorArea'>
+              <li class=" item">
+                <input type="color" class="item-color" value="#c4c4c4" hidden id='current-color' onchange="changeColor()"><label for="current-color"><span class="color" id='current-color__circle'></span>Current color</label></li>
+              <li class="item palette" id = "prev-color"><span class="color" id='prev-color__circle'></span>Prev color</li>
+              <li class="item palette" id = "red"><span class="color" style="background: #ff0000 ;"></span>red</li>
+              <li class="item palette" id = "blue"><span class="color" style="background: #0000ff ;"></span>blue</li>
             </ul>
           </div>
           <div class="panel change-img">

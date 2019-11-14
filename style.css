@@ -2,17 +2,19 @@
   font-family: "Roboto";
   src: url("./assets/fonts/Roboto/Roboto-Regular.ttf");
 }
-body {
-  background: #E5E5E5;
+.body-wrapper {
+  background-color: #e5e5e5;
   margin: 0 auto;
   max-width: 1450px;
+  user-select: none;
+  font-family: "Roboto";
 }
 
 header {
   width: 100%;
   height: 50px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24), 0px 0px 4px rgba(0, 0, 0, 0.12);
-  background: white;
+  background-color: white;
   border: 10px;
   z-index: 10;
   position: fixed;
@@ -25,17 +27,17 @@ header .nav_wrapper {
   height: 50px;
   padding: 0 10px;
 }
-header .nav_wrapper .left-part {
+header .nav_wrapper .menu-page-title {
   display: flex;
 }
-header .nav_wrapper .left-part .nav-icon {
+header .nav_wrapper .menu-page-title .nav-icon {
   margin-right: 20px;
   position: relative;
 }
-header .nav_wrapper .left-part .nav-icon img {
+header .nav_wrapper .menu-page-title .nav-icon img {
   margin-top: 5px;
 }
-header .nav_wrapper .left-part .page-title {
+header .nav_wrapper .menu-page-title .page-title {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
@@ -46,7 +48,7 @@ header .nav_wrapper .left-part .page-title {
 main .main-wrapper {
   width: 100%;
   height: 950px;
-  background: white;
+  background-color: white;
   position: relative;
 }
 main .main-wrapper .panel-block {
@@ -68,6 +70,7 @@ main .main-wrapper .panel-block .panel {
   border: 1px solid rgba(0, 0, 0, 0.541327);
   width: 512px;
   height: 512px;
+  overflow: hidden;
 }
 
 li {
@@ -76,14 +79,20 @@ li {
   font-weight: normal;
   font-size: 16px;
   color: rgba(0, 0, 0, 0.541327);
+  border: 1px solid transparent;
 }
 
 .item-color {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: transparent;
+  background-color: transparent;
   border: 1px solid black;
+  border: none;
+  padding: 0px;
+  overflow: hidden;
+  outline: none;
+  margin-right: 10px;
 }
 
 .color-panel ul {
@@ -95,10 +104,35 @@ li {
 }
 
 .item {
-  margin: 27px 15px;
+  padding: 10px;
+  margin: 7px;
 }
-.item:hover {
-  cursor: pointer;
+.item img {
+  margin-right: 10px;
+}
+
+.inactive {
+  opacity: 0.5;
+  cursor: no-drop;
+  user-select: none;
+}
+
+.active {
+  border: 1px solid rgba(255, 0, 0, 0.2);
+}
+
+.color {
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: cadetblue;
+  margin-right: 10px;
+}
+
+.tools:hover {
+  background-color: burlywood;
 }
 
 /*# sourceMappingURL=style.css.map */
