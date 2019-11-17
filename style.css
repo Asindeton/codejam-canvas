@@ -1,0 +1,138 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/Roboto/Roboto-Regular.ttf");
+}
+.body-wrapper {
+  background-color: #e5e5e5;
+  margin: 0 auto;
+  max-width: 1450px;
+  user-select: none;
+  font-family: "Roboto";
+}
+
+header {
+  width: 100%;
+  height: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24), 0px 0px 4px rgba(0, 0, 0, 0.12);
+  background-color: white;
+  border: 10px;
+  z-index: 10;
+  position: fixed;
+  max-width: 1450px;
+}
+header .nav_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 0 10px;
+}
+header .nav_wrapper .menu-page-title {
+  display: flex;
+}
+header .nav_wrapper .menu-page-title .nav-icon {
+  margin-right: 20px;
+  position: relative;
+}
+header .nav_wrapper .menu-page-title .nav-icon img {
+  margin-top: 5px;
+}
+header .nav_wrapper .menu-page-title .page-title {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+main .main-wrapper {
+  width: 100%;
+  height: 950px;
+  background-color: white;
+  position: relative;
+}
+main .main-wrapper .panel-block {
+  display: flex;
+  flex-direction: column;
+}
+main .main-wrapper .panel-block .panel {
+  width: 220px;
+  height: 220px;
+  margin-left: 30px;
+  margin-top: 80px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.24), 0px 0px 4px rgba(0, 0, 0, 0.12);
+}
+
+.canvas-block {
+  position: absolute;
+  left: 720px;
+  top: 120px;
+  border: 1px solid rgba(0, 0, 0, 0.541327);
+  width: 512px;
+  height: 512px;
+  overflow: hidden;
+}
+
+li {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.541327);
+  border: 1px solid transparent;
+}
+
+.item-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid black;
+  border: none;
+  padding: 0px;
+  overflow: hidden;
+  outline: none;
+  margin-right: 10px;
+}
+
+.color-panel ul {
+  display: flex;
+  align-items: center;
+}
+.color-panel ul li:nth-child(2) {
+  margin-left: 5px;
+}
+
+.item {
+  padding: 10px;
+  margin: 7px;
+}
+.item img {
+  margin-right: 10px;
+}
+
+.inactive {
+  opacity: 0.5;
+  cursor: no-drop;
+  user-select: none;
+}
+
+.active {
+  border: 1px solid rgba(255, 0, 0, 0.2);
+}
+
+.color {
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: cadetblue;
+  margin-right: 10px;
+}
+
+.tools:hover {
+  background-color: burlywood;
+}
+
+/*# sourceMappingURL=style.css.map */
